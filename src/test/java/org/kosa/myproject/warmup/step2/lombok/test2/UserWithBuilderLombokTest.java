@@ -1,5 +1,8 @@
 package org.kosa.myproject.warmup.step2.lombok.test2;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class UserWithBuilderLombokTest {
     public static void main(String[] args) {
         // lombok 으로 생성한 Builder Pattern 적용된 User 객체를 생성해본다
@@ -8,6 +11,6 @@ public class UserWithBuilderLombokTest {
                 .username("이강인")
                 .email("lee@gmail.com")
                 .build();
-        System.out.println(user);
+        log.info(user.toString());
     }
 }
