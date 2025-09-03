@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.kosa.myproject.entity.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 /*
         EntityManager : JPA (Java Persistence API) 의 핵심 객체
         엔티티 객체를 관리하고 데이터베이스와 상호 작용하는 역할을 함
@@ -21,7 +20,7 @@ import org.springframework.stereotype.Component;
         - 변경 감지 Dirty Checking
         - 쓰기 지연
  */
-@Component // JPA EntityManager 공부를 위한 클래스, 테스트 후에 주석처리
+//@Component // JPA EntityManager 공부를 위한 클래스, 테스트 후에 주석처리
 @Slf4j
 public class EntityManagerStudy implements CommandLineRunner{
     @Autowired

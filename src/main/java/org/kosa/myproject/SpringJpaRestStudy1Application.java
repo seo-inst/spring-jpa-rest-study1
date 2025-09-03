@@ -9,7 +9,5 @@ public class SpringJpaRestStudy1Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringJpaRestStudy1Application.class, args);
-        log.info("lombok log test");
 	}
-
 }
