@@ -36,6 +36,10 @@ public class CarController {
     /*
             Get   /api/cars      ->  모든 자동차 조회  Collection
             Get   /api/cars/1   -> 특정 자동차 조회   Resource
+            POST  /api/cars   -> 새 자동차 생성
+            PUT    /api/cars/1   -> 자동차 수정
+            DELETE /api/cars/1 -> 자동차 삭제
+            PATCH /api/cars/1 -> 자동차 부분 수정
      */
     @GetMapping
     public ResponseEntity<List<CarDto>> getAllCars(){
@@ -49,6 +53,7 @@ public class CarController {
             // HTTP 200 OK + 데이터 응답
             return ResponseEntity.ok(carDtos);
     }
+
 }
 
 
