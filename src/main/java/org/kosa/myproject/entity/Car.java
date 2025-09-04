@@ -43,6 +43,11 @@ public class Car {
         }
         this.modelName = newModelName.trim();
     }
+    public void updateCar(String newModelName, Long newPrice){
+        // 검증 절차
+        this.modelName = newModelName;
+        this.price = newPrice;
+    }
 }
 
 
