@@ -48,7 +48,25 @@ public class Car {
         this.modelName = newModelName;
         this.price = newPrice;
     }
+
+    /**
+     *  가격 할인 적용 메서드
+     * @param rate 할인율 (0.1 = 10% 할인율)
+     */
+    public void applyDiscount(double rate) {
+        if(rate < 0 || rate > 1)
+            throw new IllegalArgumentException("할인율은 0과 1 사이여야 합니다");
+        this.price = Math.round(this.price * (1 - rate));
+    }
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -52,7 +52,38 @@ public class CarService {
         existingCar.updateCar(modelName,price);
         return existingCar;
     }
+    /**
+     *  모델명으로 자동차 조회
+     */
+    public List<Car> findCarsByModelName(String modelName){
+        List<Car> cars = carRepository.findByModelName(modelName);
+        return cars;
+    }
+
+    /**
+     * 자동차 할인 적용
+     * @param carId
+     * @param rate
+     * @return 할인 적용된 자동차
+     */
+    @Transactional
+    public Car applyDiscount(Long carId, double rate) {
+        Car car = findCarById(carId);
+        Long originalPrice = car.getPrice();
+        // Entity 의 business method를 활용
+        car.applyDiscount(rate); //  엔티티 매니저가 엔티티의 변경 감지( Dirty Checking) 를 통해 DB 에 업데이트 ( 트랜잭션 커밋 시점에 )
+        return  car;
+    }
 }
+
+
+
+
+
+
+
+
+
 
 
 
